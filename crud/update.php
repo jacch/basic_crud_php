@@ -5,7 +5,7 @@
   日期：
   用途：
   作法：
-  連結資料庫->寫入一筆->
+  連結資料庫->更新一筆->
 
 ********************************************************************/
 //變數放這裡
@@ -16,9 +16,9 @@
 //demo.db =資料庫位置
 //如果路徑不在當前的目錄　: /home/pi/demo.db
 //連結資料庫 
-$myPDO = new PDO('sqlite:/home/pi/laravel/sqlitedb/crud.db');
+$myPDO = new PDO('sqlite:demo.db');
 
  //更新計數次數
-$myPDO->exec("update score set counter=counter+1 where name='kiki'");
+$myPDO->exec("update demo set name='kiki1' where name='kiki'");
 
 ?>
